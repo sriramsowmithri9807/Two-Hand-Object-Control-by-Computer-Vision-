@@ -1,154 +1,136 @@
-# Two-Hand-Object-Control-by-Computer-Vision-
+# Two-Hand Object Control via Computer Vision
 
-````markdown
-# Two-Hand Object Control via Computer Vision 🎯
+Control objects using your hands in real time with Computer Vision & AI.  
+Dual-hand gesture tracking • Real-time object manipulation • Modular & Extensible
 
-**Two-Hand-Object-Control-by-Computer-Vision** is a computer vision project that enables manipulation of virtual or physical objects using the gestures or positions of *both hands* in real time. With deep learning, tracking, and gesture mapping, this system can interpret dual-hand input to control objects or environments intuitively.
+---
 
 ## 🚀 Features
 
-- **Dual-hand tracking**: Simultaneously monitor the positions and gestures of both hands.
-- **Gesture-to-action mapping**: Map hand movements, orientations, and gestures to object control commands (e.g. translation, rotation, scaling).
-- **Real-time feedback**: Low-latency processing to enable fluid, responsive control.
-- **Modular architecture**: Easily extendable components for detection, tracking, and control logic.
-- **Cross-platform compatibility**: Designed to run on Windows, Linux, and macOS (assuming compatible hardware and dependencies).
+- Dual-hand tracking to monitor the positions and gestures of both hands  
+- Gesture-to-action mapping for translation, rotation, and scaling of objects  
+- Real-time feedback for fluid, responsive control  
+- Modular architecture for easy extension  
+- Cross-platform compatibility (Windows, Linux, macOS)  
+
+---
 
 ## 📦 Installation & Setup
 
 1. Clone this repository:
-   ```bash
    git clone https://github.com/sriramsowmithri9807/Two-Hand-Object-Control-by-Computer-Vision.git
    cd Two-Hand-Object-Control-by-Computer-Vision
-````
 
 2. (Optional) Create and activate a virtual environment:
-
-   ```bash
    python3 -m venv venv
    source venv/bin/activate    # On Windows: venv\Scripts\activate
-   ```
 
-3. Install required dependencies:
-
-   ```bash
+3. Install dependencies:
    pip install -r requirements.txt
-   ```
 
-4. (If applicable) Download any model weights or datasets:
-
-   ```text
-   # Place pretrained weights in ./models/
-   # Place sample gesture dataset in ./data/
-   ```
-
-5. Run the demo script:
-
-   ```bash
+4. Run the demo:
    python demo.py
-   ```
 
-6. (Optional) Run unit tests:
-
-   ```bash
-   pytest
-   ```
+---
 
 ## 🧠 How It Works
 
-1. **Hand detection** – Detects and landmarks key points on both hands in each camera frame.
-2. **Gesture recognition & filtering** – Classifies gestures (open hand, pinch, drag, rotate, etc.).
-3. **Control mapping** – Converts gestures and hand movements into object manipulation commands.
-4. **Rendering / actuation** – Executes commands (simulation or physical setup) with real-time feedback.
+1. Hand detection – Detects and landmarks key points on both hands in each camera frame  
+2. Gesture recognition – Classifies gestures such as open hand, pinch, drag, rotate, etc.  
+3. Control mapping – Converts gestures into commands for manipulating objects  
+4. Rendering / actuation – Executes commands to control virtual or physical objects  
+
+---
 
 ## 🛠 Project Structure
 
-```
 .
-├── data/                   # Gesture datasets or recorded hand motion logs
-├── models/                 # Pretrained model weights, checkpoints
-├── src/                    # Core source code (detection, tracking, control)
+├── data/                   # Gesture datasets or recordings
+├── models/                 # Pretrained model weights
+├── src/                    # Core source code
 │   ├── detection.py
 │   ├── gesture.py
 │   ├── control.py
 │   └── utils.py
-├── demo.py                 # Demonstration / entry-point script
-├── requirements.txt        # Python dependencies
+├── demo.py                 # Main demo script
+├── requirements.txt        # Dependencies
 ├── tests/                  # Unit tests
-│   └── test_gesture.py
-└── README.md               # This file
-```
+└── README.md               # Project docs
+
+---
 
 ## 🎯 Sample Usage
 
-```bash
-# Launch the system using webcam input
-python demo.py --input webcam --mode interactive
+# Launch with webcam
+python demo.py --input webcam
 
-# Use a video file instead
-python demo.py --input videos/hand_demo.mp4 --mode playback
+# Run on a video file
+python demo.py --input videos/demo.mp4
 
-# Toggle visualization
-python demo.py --visualize False
-```
+---
 
 ## 🎨 Supported Gestures & Controls
 
-| Gesture / Hand Motion    | Mapped Action           |
-| ------------------------ | ----------------------- |
-| Pinch & drag             | Move object             |
-| Twist / rotate fingers   | Rotate object           |
-| Spread / close fingers   | Scale object            |
-| Two-hand symmetry (both) | Complex transformations |
-| Hand hold / stop gesture | Freeze / pause          |
+Gesture / Motion           | Action              
+---------------------------|----------------------
+Pinch & drag               | Move object         
+Twist / rotate fingers     | Rotate object       
+Spread / close fingers     | Scale object        
+Two-hand symmetry          | Complex transforms  
+Stop gesture               | Pause / Freeze      
 
-## ✅ Dependencies / Requirements
+---
 
-* Python 3.7+
-* OpenCV
-* NumPy
-* A hand detection / pose estimation library (e.g. MediaPipe, OpenPose, or custom model)
-* (Optional) PyTorch / TensorFlow (if using custom neural networks)
+## ✅ Requirements
 
-Install via:
+- Python 3.7+  
+- OpenCV  
+- NumPy  
+- MediaPipe / OpenPose  
+- (Optional) PyTorch or TensorFlow (for custom models)  
 
-```bash
-pip install opencv-python numpy mediapipe
-```
+Install:
+   pip install opencv-python numpy mediapipe
 
-(Or whatever is listed in your `requirements.txt`.)
+---
 
-## 📈 Results & Demo
+## 📈 Demo & Results
 
-Add screenshots or GIFs of your system in action here. For example:
+(Add screenshots or GIFs of the system in action here)  
 
-![Demo Screenshot](path/to/screenshot.png)
-*Fig: Two-hand manipulation of a virtual object*
+Example: Controlling a virtual object with two hands in real time.
 
-## 🚀 Extensions & Future Work
+---
 
-* Gesture personalization
-* Multi-object control
-* Haptic / physical interface
-* 3D object control
-* Performance optimization
+## 🚀 Future Improvements
+
+- Gesture personalization  
+- Multi-object control  
+- 3D object manipulation  
+- Haptic feedback integration  
+- Performance optimization  
+
+---
 
 ## 🤝 Contributing
 
-Contributions, bug reports, and feature requests are welcome!
+Contributions are welcome!  
 
-1. Fork the repository.
-2. Create a feature branch: `git checkout -b feature/YourFeature`.
-3. Commit changes and add tests.
-4. Submit a Pull Request.
+1. Fork the repo  
+2. Create a branch: git checkout -b feature/YourFeature  
+3. Commit & push your changes  
+4. Submit a PR  
+
+---
 
 ## 📝 License
 
-[MIT License](LICENSE)
+MIT License
 
-## 📞 Contact / Acknowledgments
+---
 
-* **Author**: [Sriram Sowmithri](https://github.com/sriramsowmithri9807)
-* **Email**: [sowmithrisriram7@gmail.com](mailto:sowmithrisriram7@gmail.com)
-* **Acknowledgments**: Thanks to OpenCV, MediaPipe, and other open-source tools used in this project.
+## 📞 Contact
 
-
+- Author: Sriram Sowmithri (https://github.com/sriramsowmithri9807)  
+- Email: sowmithrisriram7@gmail.com  
+- Acknowledgments: Thanks to OpenCV, MediaPipe, and open-source tools  
